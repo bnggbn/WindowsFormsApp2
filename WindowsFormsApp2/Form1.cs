@@ -18,9 +18,9 @@ namespace WindowsFormsApp2
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+        
         }
-    
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -37,6 +37,8 @@ namespace WindowsFormsApp2
         public int i;
         public int j;
         private void enter_Click(object sender, EventArgs e)
+        public class Discount
+
         {
             if (Jontype != null)
             {
@@ -71,6 +73,16 @@ namespace WindowsFormsApp2
         private void jmon_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - textBox1.Text.Length);
         }
     }
     
