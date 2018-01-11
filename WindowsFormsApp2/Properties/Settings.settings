@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsApp2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="jkac" Type="System.String" Scope="User">
+      <Value Profile="(Default)">記帳機</Value>
+    </Setting>
+    <Setting Name="type" Type="System.String" Scope="User">
+      <Value Profile="(Default)">品項</Value>
+    </Setting>
+    <Setting Name="inout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">類別</Value>
+    </Setting>
+    <Setting Name="折扣" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">類別</Value>
+    </Setting>
+    <Setting Name="off" Type="System.String" Scope="User">
+      <Value Profile="(Default)">折扣</Value>
+    </Setting>
+    <Setting Name="enter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">enter</Value>
+    </Setting>
+    <Setting Name="clear" Type="System.String" Scope="User">
+      <Value Profile="(Default)">清除</Value>
+    </Setting>
+    <Setting Name="comfirm" Type="System.String" Scope="User">
+      <Value Profile="(Default)">確認</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
