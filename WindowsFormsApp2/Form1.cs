@@ -18,12 +18,9 @@ namespace WindowsFormsApp2
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.jondiscount.Items.Add("無");
-            this.jondiscount.Items.Add("95折");
-            this.jondiscount.SelectedIndex = 1;
 
         }
-    
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -34,11 +31,20 @@ namespace WindowsFormsApp2
         {
 
         }
-        public class discount
+        public class Discount
         {
             public string dis_off;
             public float dis_value;
         }
-        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - textBox1.Text.Length);
+        }
     }
 }
