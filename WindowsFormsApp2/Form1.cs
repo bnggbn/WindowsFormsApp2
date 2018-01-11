@@ -18,10 +18,7 @@ namespace WindowsFormsApp2
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.jondiscount.Items.Add("無");
-            this.jondiscount.Items.Add("95折");
-            this.jondiscount.SelectedIndex = 1;
-
+            
         }
     
 
@@ -34,11 +31,47 @@ namespace WindowsFormsApp2
         {
 
         }
-        public class discount
+         string[] Jontype = new string[6];
+        string[] Jonmoney = new string[8];
+        public Array jonarr = new Array[1000];
+        public int i;
+        public int j;
+        private void enter_Click(object sender, EventArgs e)
         {
-            public string dis_off;
-            public float dis_value;
+            if (Jontype != null)
+            {
+                for(i=0; i<=jtyp.Text.Length; i++)
+                {
+                    Console.WriteLine(jtyp.Text,i);
+                    Jontype[i] = jtyp.Text.ToString();
+                }
+                foreach (string s in Jontype)
+                {
+                    Console.WriteLine(s);
+                }
+                MessageBox.Show("品項:" + Jontype[0]+"\n價錢:"+Jonmoney);
+                for (j = 0; i <= jmon.Text.Length; j++)
+                {
+                    Console.WriteLine(jmon.Text, j);
+                    Jonmoney[j] = jmon.Text;
+                }
+                foreach (string s in Jonmoney)
+                {
+                    Console.WriteLine(s);
+                }
+                
+            }
         }
-        
+
+        private void jtyp_TextChanged(object sender, EventArgs e)
+        {
+            Jontype[i] = jtyp.Text;
+        }
+
+        private void jmon_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
