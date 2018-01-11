@@ -60,17 +60,12 @@
             this.clear.TabIndex = 1;
             this.clear.Text = global::WindowsFormsApp2.Properties.Settings.Default.clear;
             this.clear.UseVisualStyleBackColor = true;
-            this.clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // jonio
-            // 
-            this.jonio.AllowDrop = true;
-            this.jonio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.jonio.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            //
             this.jonio.FormattingEnabled = true;
             this.jonio.Items.AddRange(new object[] {
-            "收入",
-            "支出"});
+            });
 
             this.jonio.Location = new System.Drawing.Point(101, 61);
             this.jonio.Name = "jonio";
@@ -91,7 +86,7 @@
             // 
             this.type.AutoSize = true;
             this.type.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApp2.Properties.Settings.Default, "inout", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.type.Location = new System.Drawing.Point(31, 64);
+            this.type.Location = new System.Drawing.Point(31, 69);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(29, 12);
             this.type.TabIndex = 4;
@@ -101,7 +96,7 @@
             // 
             this.thing.AutoSize = true;
             this.thing.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApp2.Properties.Settings.Default, "type", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.thing.Location = new System.Drawing.Point(31, 28);
+            this.thing.Location = new System.Drawing.Point(31, 35);
             this.thing.Name = "thing";
             this.thing.Size = new System.Drawing.Size(29, 12);
             this.thing.TabIndex = 5;
@@ -120,7 +115,7 @@
             // 
             // jondiscount
             // 
-            this.jondiscount.DisplayMember = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jondiscount.DisplayMember = "Key";
             this.jondiscount.FormattingEnabled = true;
             this.jondiscount.Items.AddRange(new object[] {
             "無",
