@@ -26,8 +26,5 @@
     <Setting Name="comfirm" Type="System.String" Scope="User">
       <Value Profile="(Default)">確認</Value>
     </Setting>
-    <Setting Name="jonmoney" Type="System.String" Scope="User">
-      <Value Profile="(Default)">金額</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

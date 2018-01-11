@@ -31,13 +31,11 @@
             this.enter = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.jonio = new System.Windows.Forms.ComboBox();
-            this.jtyp = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.type = new System.Windows.Forms.Label();
             this.thing = new System.Windows.Forms.Label();
-            this.discount = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.jondiscount = new System.Windows.Forms.ComboBox();
-            this.money = new System.Windows.Forms.Label();
-            this.jmon = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // enter
@@ -49,7 +47,6 @@
             this.enter.TabIndex = 0;
             this.enter.Text = global::WindowsFormsApp2.Properties.Settings.Default.comfirm;
             this.enter.UseVisualStyleBackColor = true;
-            this.enter.Click += new System.EventHandler(this.enter_Click);
             // 
             // clear
             // 
@@ -71,21 +68,19 @@
             this.jonio.Items.AddRange(new object[] {
             "收入",
             "支出"});
-
             this.jonio.Location = new System.Drawing.Point(101, 61);
             this.jonio.Name = "jonio";
             this.jonio.Size = new System.Drawing.Size(69, 20);
             this.jonio.TabIndex = 2;
             this.jonio.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // jtyp
+            // textBox1
             // 
-            this.jtyp.Location = new System.Drawing.Point(101, 25);
-            this.jtyp.MaxLength = 5;
-            this.jtyp.Name = "jtyp";
-            this.jtyp.Size = new System.Drawing.Size(100, 22);
-            this.jtyp.TabIndex = 3;
-            this.jtyp.TextChanged += new System.EventHandler(this.jtyp_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(101, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // type
             // 
@@ -107,63 +102,38 @@
             this.thing.TabIndex = 5;
             this.thing.Text = global::WindowsFormsApp2.Properties.Settings.Default.type;
             // 
-            // discount
+            // label3
             // 
-
-            this.discount.AutoSize = true;
-            this.discount.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApp2.Properties.Settings.Default, "off", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.discount.Location = new System.Drawing.Point(31, 102);
-            this.discount.Name = "discount";
-            this.discount.Size = new System.Drawing.Size(29, 12);
-            this.discount.TabIndex = 6;
-            this.discount.Text = global::WindowsFormsApp2.Properties.Settings.Default.off;
+            this.label3.AutoSize = true;
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApp2.Properties.Settings.Default, "off", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.label3.Location = new System.Drawing.Point(31, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 6;
+            this.label3.Text = global::WindowsFormsApp2.Properties.Settings.Default.off;
             // 
             // jondiscount
             // 
-            this.jondiscount.DisplayMember = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jondiscount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.jondiscount.FormattingEnabled = true;
             this.jondiscount.Items.AddRange(new object[] {
-            "無",
             "9折"});
             this.jondiscount.Location = new System.Drawing.Point(101, 94);
             this.jondiscount.Name = "jondiscount";
             this.jondiscount.Size = new System.Drawing.Size(69, 20);
-            this.jondiscount.TabIndex = 0;
-            this.jondiscount.ValueMember = "Value";
+            this.jondiscount.TabIndex = 7;
             this.jondiscount.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // money
-            // 
-            this.money.AutoSize = true;
-            this.money.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApp2.Properties.Settings.Default, "jonmoney", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.money.Location = new System.Drawing.Point(31, 130);
-            this.money.Name = "money";
-            this.money.Size = new System.Drawing.Size(29, 12);
-            this.money.TabIndex = 7;
-            this.money.Text = global::WindowsFormsApp2.Properties.Settings.Default.jonmoney;
-            // 
-            // jmon
-            // 
-            this.jmon.Location = new System.Drawing.Point(101, 120);
-            this.jmon.MaxLength = 7;
-            this.jmon.Name = "jmon";
-            this.jmon.Size = new System.Drawing.Size(100, 22);
-            this.jmon.TabIndex = 8;
-            this.jmon.TextChanged += new System.EventHandler(this.jmon_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-
-            this.Controls.Add(this.jmon);
-            this.Controls.Add(this.money);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.jondiscount);
-            this.Controls.Add(this.discount);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.thing);
             this.Controls.Add(this.type);
-            this.Controls.Add(this.jtyp);
             this.Controls.Add(this.jonio);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.enter);
@@ -180,29 +150,12 @@
 
         private System.Windows.Forms.Button enter;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.ComboBox jonio;
-        private System.Windows.Forms.TextBox jtyp;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label type;
         private System.Windows.Forms.Label thing;
-        private System.Windows.Forms.Label discount;
-        private System.Windows.Forms.ComboBox jondiscount;
-        private System.Windows.Forms.Label money;
-        private System.Windows.Forms.TextBox jmon;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.ComboBox jondiscount;
+        private System.Windows.Forms.ComboBox jonio;
     }
-   /* public class discount
-    {
-        public discount(string jdis, double jvalue)
-        {
-            jdis = disname;
-            jvalue = disvalue;
-        }
-        
-        public override string ToString()
-        {
-            return disname;
-        }
-
-        
-    }*/
 }
 

@@ -115,17 +115,5 @@ namespace WindowsFormsApp2.Properties {
                 this["comfirm"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("金額")]
-        public string jonmoney {
-            get {
-                return ((string)(this["jonmoney"]));
-            }
-            set {
-                this["jonmoney"] = value;
-            }
-        }
     }
 }
