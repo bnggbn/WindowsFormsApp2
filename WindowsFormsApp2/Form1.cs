@@ -44,8 +44,7 @@ namespace WindowsFormsApp2
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            jonio.Controls.Clear();
-            textBox1.Controls.Clear();
+            textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - textBox1.Text.Length);
         }
     }
 }
