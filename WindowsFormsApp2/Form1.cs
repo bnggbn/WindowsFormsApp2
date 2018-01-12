@@ -18,9 +18,9 @@ namespace WindowsFormsApp2
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
+            
         }
-
+    
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -33,35 +33,23 @@ namespace WindowsFormsApp2
         }
          string[] Jontype = new string[6];
         string[] Jonmoney = new string[8];
+
         public Array jonarr = new Array[1000];
         public int i;
-        public int j;
+        public int j= 176;
         private void enter_Click(object sender, EventArgs e)
-        public class Discount
-
         {
-            if (Jontype != null)
+            Label[] label = new Label[4];
+            label[i] = new Label();
+            if (i < 3)
             {
-                for(i=0; i<=jtyp.Text.Length; i++)
-                {
-                    Console.WriteLine(jtyp.Text,i);
-                    Jontype[i] = jtyp.Text.ToString();
-                }
-                foreach (string s in Jontype)
-                {
-                    Console.WriteLine(s);
-                }
-                MessageBox.Show("品項:" + Jontype[0]+"\n價錢:"+Jonmoney);
-                for (j = 0; i <= jmon.Text.Length; j++)
-                {
-                    Console.WriteLine(jmon.Text, j);
-                    Jonmoney[j] = jmon.Text;
-                }
-                foreach (string s in Jonmoney)
-                {
-                    Console.WriteLine(s);
-                }
-                
+                this.Controls.Add(label[i]);
+                label[i].Text = "品項:" + Jontype[i] + "\t金額:" + Jonmoney[i];
+                label[i].Location = new System.Drawing.Point(31, j);
+                label[i].TabIndex = 9;
+                this.label1.Size = new System.Drawing.Size(23, 12);
+                i = i + 1;
+                j = j + 25;
             }
         }
 
@@ -72,17 +60,7 @@ namespace WindowsFormsApp2
 
         private void jmon_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - textBox1.Text.Length);
+            Jonmoney[i] = jmon.Text;
         }
     }
     
